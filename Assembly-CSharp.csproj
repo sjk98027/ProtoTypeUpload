@@ -66,6 +66,7 @@
      <Compile Include="Assets\Player\MovePlayer.cs" />
      <Compile Include="Assets\Player\PlayerBody.cs" />
      <Compile Include="Assets\Player\PlayerStatus.cs" />
+     <Compile Include="Assets\Player\test\MovePlayer1.cs" />
      <Compile Include="Assets\filed\Swamp.cs" />
      <None Include="Assets\PQAssets\Query-Chan\Shaders\PQ_Skin.shader" />
      <None Include="Assets\PQAssets\Query-Chan\Shaders\PQ_WrappingPaper.shader" />

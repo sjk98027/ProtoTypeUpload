@@ -37,5 +37,6 @@ C:\Users\dga\Documents\ProtoType\ProtoType\Temp\bin\Debug\UnityEngine.xml
 C:\Users\dga\Documents\ProtoType\ProtoType\Temp\bin\Debug\UnityEditor.xml
 C:\Users\dga\Documents\ProtoType\ProtoType\Temp\bin\Debug\UnityEngine.UI.xml
 C:\Users\dga\Documents\ProtoType\ProtoType\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\dga\Documents\ProtoType\ProtoType\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\dga\Documents\ProtoType\ProtoType\obj\Debug\Assembly-CSharp.dll
 C:\Users\dga\Documents\ProtoType\ProtoType\obj\Debug\Assembly-CSharp.pdb

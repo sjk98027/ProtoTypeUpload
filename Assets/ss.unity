@@ -498,11 +498,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400074, guid: 2b96500591fb51446bab5c44bc5fa467, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 402.88
+      value: 395.64
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 2b96500591fb51446bab5c44bc5fa467, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.03
+      value: -10.68
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 2b96500591fb51446bab5c44bc5fa467, type: 3}
       propertyPath: m_LocalPosition.z
@@ -554,7 +554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2b96500591fb51446bab5c44bc5fa467, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.10587
+      value: 7.04
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2b96500591fb51446bab5c44bc5fa467, type: 3}
       propertyPath: m_LocalPosition.z
@@ -926,7 +926,7 @@ GameObject:
   - 23: {fileID: 775283699}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1169,13 +1169,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1058214888}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a65c75066f7f4393325d4c071d62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  jumpSpeed: 80
+  jumpSpeed: 0
+  oneTimeJumpCount: 1
+  maximumJumpCount: 1
 --- !u!54 &1058214891
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1199,7 +1201,7 @@ CharacterController:
   m_GameObject: {fileID: 1058214888}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1.7
   m_Radius: 0.14
@@ -1224,6 +1226,19 @@ MonoBehaviour:
   LimitTime: 200
   PlayTime: 0
   OnPlayTime: 0
+--- !u!114 &1058214895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058214888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8cbb37b741b3f4b9bd0d6a097bffc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneTimeJumpCount: 1
+  maximumJumpCount: 1
 --- !u!1 &1086388872
 GameObject:
   m_ObjectHideFlags: 0

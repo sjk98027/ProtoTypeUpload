@@ -7,6 +7,7 @@ TagManager:
   - Normal_Enemy
   - Boss_Enemy
   - foot
+  - field
   layers:
   - Default
   - TransparentFX
