@@ -10,7 +10,7 @@ public class Swamp : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update (Collider coll) {
+	void Update () {
 		//coll.GetComponent<MovePlayer>;
 		//player.Move -= player;
 	}

@@ -11,20 +11,28 @@ public class MovePlayer1: MonoBehaviour {
 
 	Transform player;
 	Vector3 movePosition;
-	float x ;
-	float x_max;
+	public float x = 0;
+	public float x_speed = 30 ;
 
-	float y ; // 
-	float y_base;      // character y base;, 
+	public float x_base;
+
+	public float y ; // 
+	public float y_base;      // character y base;, 
 	//float deltahigh=0;
-	float gravity = 13.0f;     // gravity feel
-	int direction = 0;       // 0:stop0, 1:jump, 2:down
 
-	float Gety_base(){
+	float friction = 13.0f;// machalpower;
+	float gravity = 13.0f;     // gravity feel
+	public int direction_y = 0;       // 0:stop0, 1:jump, 2:down
+	public int direction_x = 0;
+	public float Gety_base_y(){
 		return player.transform.position.y;
 	}
-
+	public float Getx_base_x(){
+		return player.transform.position.x;
+	}
 	// 설정값
+	public float move_speed = 5f;	//
+	const float move_accell = 0.01f;	//
 	const float jump_speed = 0.2f;  // 
 	const float jump_accell = 0.01f; // 
 
@@ -39,7 +47,9 @@ public class MovePlayer1: MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GetComponent<Transform> ();
-		y_base = Gety_base();
+		y_base = Gety_base_y();
+//		y = y_base;
+		//x_base = Getx_base_x ();
 	}
 
 	// Update is called once per frame
@@ -48,48 +58,55 @@ public class MovePlayer1: MonoBehaviour {
 		Vector3 moveposition = gameObject.transform.position;
 		moveposition.y = y;
 		JumpProcess();
-//		Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal", 0f, 0f));
-//			transform.Translate(moveDirection * Time.deltaTime);
-//
-
 		gameObject.transform.position = moveposition;
+		DoMove ();
 
-		if (Input.GetKey (KeyCode.C)) {
-			DoJump ();
-//			if(Input.GetKey(KeyCode.LeftArrow)
-//				{moveposition.x > }
+
+			if (Input.GetKey (KeyCode.C)) {
+				DoJump ();
 
 		}
+
+
+
 
 	}
 
 	void OnTriggerEnter(Collider coll){
-		y_base = Gety_base ();
-		if (coll.gameObject.tag == "field") {
-			gravity = 0;
-			//jump_speed = 0;
-		}
+		y_base = Gety_base_y ();
 	}
+
+	public enum CharacterState
+	{
+		IDLE,
+		AIR,
+	}
+
 
 
 
 	void DoMove()
 	{
-		
+		Vector3 vecPos = gameObject.transform.position;
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+			vecPos.x -= Time.deltaTime * move_speed;
+			gameObject.transform.position = vecPos;
+		}else if (Input.GetKey (KeyCode.RightArrow)) {
+			vecPos.x += Time.deltaTime * move_speed;
+			gameObject.transform.position = vecPos;
+		}
 	}
+
+
 	void DoJump() // 
 	{
-
-
-		direction = 1; 
+		direction_y = 1; 
 		gravity = jump_speed; 
-
-
 	} 
 
 	void JumpProcess()
 	{
-		switch (direction)
+		switch (direction_y)
 		{
 		case 0: // 
 			{
@@ -102,7 +119,7 @@ public class MovePlayer1: MonoBehaviour {
 					}
 					else
 					{
-						y = y_base;
+						y =y_base;
 					}
 				}
 				break;
@@ -112,7 +129,7 @@ public class MovePlayer1: MonoBehaviour {
 				y += gravity;
 				if (gravity <= 0.0f)
 				{
-					direction = 2;
+					direction_y = 2;
 				}
 				else
 				{
@@ -127,16 +144,10 @@ public class MovePlayer1: MonoBehaviour {
 				if (y > y_base) {
 					gravity += jump_accell;
 				} 
-
-				else if (y <= y_base) {
-					gravity += jump_accell;
-
-				}	
-				
 				else
 				{
-					direction = 0;
-					y = y_base;
+//					direction_y = 0;
+//					y = y_base;
 				}
 
 				break;

@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Player\Attack_foot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Player\test\MovePlayer1.cs">
     <Files>
-      <File FileName="Assets\Player\test\MovePlayer1.cs" Line="149" Column="24" />
-      <File FileName="Assets\Player\Attack_foot.cs" Line="30" Column="47" />
+      <File FileName="Assets\Player\test\MovePlayer1.cs" Line="86" Column="19" />
+      <File FileName="Assets\Player\Attack_foot.cs" Line="32" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

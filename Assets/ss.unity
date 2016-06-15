@@ -351,7 +351,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 345887136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015, y: 0.045, z: -0.025}
+  m_LocalPosition: {x: -0.015, y: 0.101, z: -0.025}
   m_LocalScale: {x: 0.36298826, y: 0.2097341, z: 0.2596803}
   m_Children: []
   m_Father: {fileID: 1058214889}
@@ -389,7 +389,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 345887136}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -502,7 +502,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 2b96500591fb51446bab5c44bc5fa467, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.68
+      value: -21.1
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 2b96500591fb51446bab5c44bc5fa467, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1018,7 +1018,7 @@ GameObject:
   - 23: {fileID: 807564451}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1203,7 +1203,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Height: 1.7
+  m_Height: 1.60796
   m_Radius: 0.14
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1237,6 +1237,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8cbb37b741b3f4b9bd0d6a097bffc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  x_speed: 30
+  x_base: 0
+  y: 0
+  y_base: 0
+  direction_y: 0
+  direction_x: 0
+  move_speed: 5
   oneTimeJumpCount: 1
   maximumJumpCount: 1
 --- !u!1 &1086388872
@@ -1659,7 +1667,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1501415677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.902, z: 0}
+  m_LocalPosition: {x: 0, y: 0.902, z: -0.021}
   m_LocalScale: {x: 1, y: 1.4956455, z: 0.320371}
   m_Children: []
   m_Father: {fileID: 1058214889}
